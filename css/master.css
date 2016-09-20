@@ -1,0 +1,60 @@
+/* CSS Styling */
+
+/* begin with mobile formatting first */
+body {
+  width: 100%;
+  background-color: lightblue;
+}
+
+.main-hdr {
+  font-size: 1.8em;
+  font-family: serif;
+  color: gold;
+  background-color: purple;
+  text-align: left;
+}
+
+.primary-nav {
+  display: none;
+  list-style-type: none;
+}
+
+.nav-items {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.nested-nav {
+  display: none;
+  list-style-type: none;
+}
+
+/* styling for larger viewports */
+@media only screen and (min-width: 640px) {
+  body {
+    background-color: lightblue;
+    width: 100%;
+  }
+
+  .main-hdr {
+    width: 100%;
+    text-align: center;
+    background-color: #33aa88;
+    color: black;
+  }
+
+  .nav-items {
+    display: inline;
+    width: 15%;
+  }
+
+  .nested-nav {
+    display: none;
+  }
+
+  .nav-with-sub::hover {
+    display: block;
+    background-color: gray;
+    color: gold;
+  }
+}
