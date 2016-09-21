@@ -1,10 +1,6 @@
 /* CSS Styling */
 
 /* begin with mobile formatting first */
-body {
-  width: 100%;
-  background-color: lightblue;
-}
 
 .main-hdr {
   font-size: 1.8em;
@@ -29,13 +25,18 @@ body {
   list-style-type: none;
 }
 
+#projects {
+  width: 80%;
+  height: 50%;
+}
+
+#projects article {
+  border: 1px solid green;
+}
+
+
 /* styling for larger viewports */
 @media only screen and (min-width: 640px) {
-  body {
-    background-color: lightblue;
-    width: 100%;
-  }
-
   .main-hdr {
     width: 100%;
     text-align: center;

@@ -1,0 +1,10 @@
+/* CSS Base styling */
+
+body {
+  width: 100%;
+  background-color: #87CEFA;
+}
+
+a {
+  text-decoration: none;
+}
