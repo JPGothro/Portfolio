@@ -4,26 +4,24 @@ var projects = [];
 
 function Project (dataIn) {
   // constructor function for a Project object
-  this.projectTitle   = dataIn.projectTitle;
-  this.projectSummary = dataIn.projectSummary;
-  this.projectDetails = dataIn.projectDetails;
-  this.projectLink    = dataIn.projectLink;
-  this.projectSrcLink = dataIn.projectSrcLink;
+  this.prjTitle   = dataIn.projectTitle;
+  this.prjSummary = dataIn.projectSummary;
+  this.prjDetails = dataIn.projectDetails;
+  this.prjLink    = dataIn.projectLink;
+  this.prjSrcLink = dataIn.projectSrcLink;
 };
 
 Project.prototype.toHtml = function() {
   // generate the HTML for the Project object to insert into the DOM (in an article tag).
   var $newArticle = $('article.project-template').clone();
-  $newArticle.find('summary').text(this.projectSummary);
-  $newArticle.find('p.project-details').text(this.projectDetails);
-  var linkItem = this.projectLink;
-  if (linkItem !== null) {
-    $newArticle.find('a.project-link').attr('href', this.projectLink).attr('target', '_blank');
-  };
-  linkItem = this.projectSrcLink;
-  if (linkItem !== null) {
-    $newArticle.find('a.project-source').attr('href', this.projectSrcLink).attr('target', '_blank');
-  };
+  $newArticle.find('summary').text(this.prjTitle + ': ' + this.prjSummary);
+  $newArticle.find('p.project-details').html(this.prjDetails);
+
+  if (this.prjLink)
+    $newArticle.find('a.project-link').attr('href', this.prjLink).attr('target', '_blank');
+
+  if (this.prjSrcLink)
+    $newArticle.find('a.project-source').attr('href', this.prjSrcLink).attr('target', '_blank');
 
   $newArticle.removeClass('project-template');
 
