@@ -10,35 +10,55 @@
     <title>Portfolio for John</title>
   </head>
   <body>
-    <header>
-      <h1 class="main-hdr">Portfolio of Projects</h1>
-    </header>
-    <nav class="primary-nav">
-    </nav>
-    <nav class="secondary-nav">
-      <ul class="nav-items">
-        <li><a href="#">Home</a></li>
-        <li><a href="https://www.linkedin.com/in/john-gothro" target="_blank">Linked In</a></li>
-        <li><a href="https://github.com/JPGothro/Portfolio" target="_blank">GitHub</a></li>
-        <li><a href="mailto:jpgothro@gmail.com">Email John</a></li>
-      </ul>
-    </nav>
-    <section id="projects">
-      <h2>Projects by John</h1>
-      <article class="project-template">
-        <details>
-          <summary>Project Title</summary>
-          <p class="project-details">Details about Project</p>
-          <p><a class="project-link" href="#">Link to project</a></p>
-          <p><a class="project-source" href="#">Link to source code</a></p>
-        </details>
-      </article>
-    </section>
-    <footer>
-      &copy; 2016 John Gothro
-    </footer>
+    <div class="the-big-container">
+      <header>
+        <h1 class="main-hdr">Portfolio of Projects</h1>
+      </header>
+      <nav class="primary-nav">
+        <div class="icon-menu"></div>
+        <ul class="nav-items">
+          <li class="tab" data-content="projects"><a href="#">Home</a></li>
+          <li class="tab" data-content="about"><a href="#">About</a></li>
+          <li><a href="https://www.linkedin.com/in/john-gothro" target="_blank">Linked In</a></li>
+          <li><a href="https://github.com/JPGothro/Portfolio" target="_blank">GitHub</a></li>
+          <li><a href="mailto:jpgothro@gmail.com">Email John</a></li>
+        </ul>
+      </nav>
+      <section id="projects" class="tab-content" data-content="projects">
+        <h2>Projects by John</h2>
+        <article class="project-template">
+          <details>
+            <summary>Project Title</summary>
+            <p class="project-details">Details about Project</p>
+            <p><a class="project-link" href="#">Link to project</a>
+               <a class="project-source" href="#">Link to source code</a></p>
+          </details>
+        </article>
+      </section>
+
+      <section id="about" class="tab-content" data-content="about">
+        <h2>John Gothro, a summary</h2>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </section>
+
+
+      <footer>
+        &copy; 2016 John Gothro
+      </footer>
+    </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/tempData.js"></script>
     <script type="text/javascript" src="scripts/portfolio.js"></script>
+    <script type="text/javascript" src="scripts/portfolioView.js"></script>
   </body>
 </html>
