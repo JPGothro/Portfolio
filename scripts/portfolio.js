@@ -13,7 +13,6 @@ Project.prototype.toHtml = function() {
   // use Handlebar templating to create project data for HTML.
   var source = $('#project-template').html();
   var template = Handlebars.compile(source);
-
   var html = template(this);
 
   return html;
