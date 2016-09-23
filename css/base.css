@@ -3,6 +3,11 @@
 body {
   width: 100%;
   background-color: #87CEFA;
+  font-family: 'Oxygen', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 a {

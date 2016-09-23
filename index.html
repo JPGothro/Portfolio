@@ -3,11 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="vendor/css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/module.css">
     <title>Portfolio for John</title>
+    <!-- Adding Handlebars templating -->
+    <script id="project-template" type="type/x-handlebars-template">
+      <article>
+        <details>
+          <summary>{{prjTitle}}: {{prjSummary}}</summary>
+          <p class="project-details">{{{prjDetails}}}</p>
+          <p><a class="project-link" href="{{prjLink}}" target="_blank">Link to Deployed Project</a>
+             <a class="project-link" href="{{prjSrcLink}}" target="_blank">Link to Source Code</a></p>
+        </details>
+      </article>
+    </script>
   </head>
   <body>
     <div class="the-big-container">
@@ -26,14 +39,6 @@
       </nav>
       <section id="projects" class="tab-content" data-content="projects">
         <h2>Projects by John</h2>
-        <article class="project-template">
-          <details>
-            <summary>Project Title</summary>
-            <p class="project-details">Details about Project</p>
-            <p><a class="project-link" href="#">Link to project</a>
-               <a class="project-source" href="#">Link to source code</a></p>
-          </details>
-        </article>
       </section>
 
       <section id="about" class="tab-content" data-content="about">
@@ -51,12 +56,12 @@
         </div>
       </section>
 
-
       <footer>
         &copy; 2016 John Gothro
       </footer>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="scripts/tempData.js"></script>
     <script type="text/javascript" src="scripts/portfolio.js"></script>
     <script type="text/javascript" src="scripts/portfolioView.js"></script>
