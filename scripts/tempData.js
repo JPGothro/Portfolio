@@ -22,7 +22,7 @@ var myProjectData = [
   {prjTitle: 'Partial project',
    prjSummary: 'Project not yet finished',
    prjDetails: '<p>Incomplete, so no details available at this time, and no links.</p>',
-   prjLink: null,
+   prjLink: '',
    prjSrcLink: null
   }
 ];
