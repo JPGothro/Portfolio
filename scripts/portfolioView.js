@@ -15,19 +15,22 @@ portfolioView.handleMainNav = function () {
 };
 
 portfolioView.handleProjectDetails = function() {
-  //TODO: I haven't figured this part out yet, and may have to revise the html if I can't...
-  //      I'm just trying to have a border on the element when it is displaying the details.
+  //TODO: I haven't figured this part out all the way yet
+  //      I have the border, but it is acting janky.
   // for styling the details/summary info
-  // $('article details').on('change', function() {
-  //   console.log('on change event');
-  //   if ($(this).is('open')) {
-  //     $(this).css('border', '1px solid green');
-  //   } else {
-  //     $(this).css('border','');
-  //   }
-  // });
+  $('article details').on('click', function() {
+    $(this).each(function() {
+      //console.log($(this));
+      if ($(this).attr('open')) {
+        $(this).css('border', '');
+      } else {
+        $(this).css('border','2px solid #33aa88');
+      }
+    });
+  });
 };
 
 
 // call the functions
 portfolioView.handleMainNav();
+portfolioView.handleProjectDetails();

@@ -4,14 +4,14 @@
 
 .main-hdr {
   font-size: 1.8em;
-  font-family: serif;
-  color: gold;
-  background-color: purple;
+  color: #FFE23D;
+  background-color: #4B0082;
   text-align: left;
+  padding-left: 0.1em;
 }
 
 .primary-nav {
-  display: none;
+  display: block; /* a temporary change */
   list-style-type: none;
 }
 
@@ -20,9 +20,16 @@
   padding: 0px;
 }
 
-.nested-nav {
-  display: none;
+.nav-items li {
+  display: block;
   list-style-type: none;
+  width: 40%;
+  border: 2px solid #4B0082;
+  border-radius: 10px;
+  padding-left: 1.1em;
+  text-align: left;
+  height: 20px;
+  margin-bottom: .3em;
 }
 
 #projects {
@@ -57,6 +64,9 @@
     display: inline;
     width: 5%;
     margin-right: .5em;
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding-left: 1.1em;
   }
 
 }
