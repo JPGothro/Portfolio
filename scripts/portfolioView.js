@@ -19,12 +19,15 @@ portfolioView.handleProjectDetails = function() {
   //      I have the border, but it is acting janky.
   // for styling the details/summary info
   $('article details').on('click', function() {
+    console.log(event.target);
     $(this).each(function() {
-      //console.log($(this));
-      if ($(this).attr('open')) {
-        $(this).css('border', '');
+      console.log('inside each()', $(this), this);
+      if ($(this).prop('open')) {
+        console.log('inside prop open', $(this), this);
+        $(this).css('border', '2px solid #33aa88');
       } else {
-        $(this).css('border','2px solid #33aa88');
+        console.log('inside else', $(this), this);
+        $(this).css('border', '0px');
       }
     });
   });
