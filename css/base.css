@@ -9,7 +9,7 @@ body {
 h1, h2, h3 {
   font-family: 'PT Sans Narrow', sans-serif;
 }
-/*Changed margin right from 5em to 1em*/
+
 a {
   text-decoration: none;
   margin-right: 1em;
