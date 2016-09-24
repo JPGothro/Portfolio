@@ -10,3 +10,6 @@ Portfolio of projects I built
 - Modified the main page to include separate project entries, using details/summary
 - Create JS file for handling constructing Project entries.
 - Created a temporary input data file (JS) to populate the project section.
+
+## Big Issue RESOLVED! By Erica Hendricks
+- Thanks to Erica for getting me to use CSS to style the project state when details are shown.

@@ -41,6 +41,10 @@
   display: block;
 }
 
+article details[open] {
+  border: 2px solid #33aa88;
+}
+
 
 @media only screen and (min-width: 915px) {
   .main-hdr {
