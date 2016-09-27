@@ -28,16 +28,26 @@ This makes use of jQuery and Handlebars.
         </details>
       </article>
     </script>
-  </head>
+    <script id="wip-template" type="type/x-handlebars-template">
+      <article>
+        <details>
+          <summary>{{prjTitle}}: {{prjSummary}}</summary>
+          <p class="project-details">{{{prjDetails}}}</p>
+          <p><a class="project-link">No Link to Deployed Project</a>
+             <a class="project-link" href="{{prjSrcLink}}" target="_blank">Link to Source Code</a></p>
+        </details>
+      </article>
+    </script>  </head>
   <body>
     <main class="the-big-container">
       <header>
         <h1 class="main-hdr">Portfolio of Projects</h1>
       </header>
       <nav class="primary-nav">
-        <div class="icon-menu"></div>
+        <div class="iconmenu"></div>
         <ul class="nav-items">
           <li class="tab" data-content="projects"><a href="#">Home</a></li>
+          <li class="tab" data-content="wips"><a href="#">Home - WIP</a></li>
           <li class="tab" data-content="about"><a href="#">About</a></li>
           <li><a href="https://www.linkedin.com/in/john-gothro" target="_blank">Linked In</a></li>
           <li><a href="https://github.com/JPGothro/Portfolio" target="_blank">GitHub</a></li>
@@ -48,7 +58,11 @@ This makes use of jQuery and Handlebars.
         <h2>Projects by John</h2>
       </section>
 
-      <section id="about" class="tab-content" data-content="about">
+      <section id="wips" class="tab-content" data-content="wips">
+        <h2>Works In Process by John</h2>
+      </section>
+
+        <section id="about" class="tab-content" data-content="about">
         <h2>John Gothro, a summary</h2>
         <div>
           <p>
@@ -69,8 +83,11 @@ This makes use of jQuery and Handlebars.
     </main>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script type="text/javascript" src="scripts/tempData.js"></script>
+    <!-- <script type="text/javascript" src="scripts/tempData.js"></script> -->
+    <!-- <script type="text/javascript" src="scripts/tempWipData.js"></script> -->
     <script type="text/javascript" src="scripts/portfolio.js"></script>
+    <!-- <script type="text/javascript" src="scripts/wip.js"></script> -->
     <script type="text/javascript" src="scripts/portfolioView.js"></script>
+    <!-- <script type="text/javascript" src="scripts/wipView.js"></script> -->
   </body>
 </html>
