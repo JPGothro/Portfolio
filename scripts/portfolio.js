@@ -75,7 +75,7 @@ Project.fetchAll = function() {
 function successHandler(data) {
   localStorage.setItem('portfolioData', JSON.stringify(data));
   Project.loadAll(data);
-  portfolioView.renderIndexPage();
+  PortfolioView.renderIndexPage();
 };
 
 function errorHandler(error) {
