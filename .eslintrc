@@ -1,19 +1,20 @@
 {
    "settings": {
-    "ecmascript": 5
+     "ecmascript": 5
   },
   "ecmaFeatures": {
+    "modules": true
   },
   "env": {
     "browser": true,
-    "jquery": true
+    "jquery": true,
+    "node": true
   },
   "rules": {
     "semi": [2, "always"],
-    "strict": [2, "global"],
-    "no-undefined": 2,
-    "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
+    "strict": 0,
     "indent": [2, 2],
+    "eqeqeq": 1,
     "quotes": [1, "single"],
     "no-multi-spaces": [1, {
       "exceptions": {
@@ -21,10 +22,7 @@
         "FunctionExpression": true
       }
     }],
-    "space-infix-ops": [2, {"int32Hint": false}],
-    "no-trailing-spaces": 1,
-    "no-mixed-spaces-and-tabs": 1,
-    "new-cap": 1,
-    no-redeclare: [2, { "builtinGlobals": true }]
+    "key-spacing": [0, {"align": "value"}],
+    "no-underscore-dangle": 0
   }
 }

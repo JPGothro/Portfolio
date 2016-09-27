@@ -30,10 +30,11 @@
   text-align: left;
   height: 20px;
   margin-bottom: .3em;
+  margin-right: .5em;
 }
 
 #projects {
-  width: 80%;
+  width: 85%;
   height: 50%;
 }
 
@@ -43,6 +44,7 @@
 
 article details[open] {
   border: 2px solid #33aa88;
+  background-color: #B6E1FC;
 }
 
 
@@ -59,16 +61,14 @@ article details[open] {
     display: block;
   }
 
-  .icon-menu {
+  .iconmenu {
     display: none;
   }
 
   .nav-items li {
     display: inline;
     width: 5%;
-    margin-right: .5em;
     border: 2px solid blue;
-    border-radius: 10px;
     padding-left: 1.1em;
   }
 
