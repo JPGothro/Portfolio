@@ -5,7 +5,7 @@
   var PortfolioView = {};
 
   PortfolioView.handleMainNav = function () {
-    // ensure the nav items function to switch between projects and about
+    // ensure the nav items function to switch between projects, wip and about
 
     $('.nav-items').on('click', '.tab', function(event) {
       $('.tab-content').hide();
