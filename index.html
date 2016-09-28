@@ -23,21 +23,17 @@ This makes use of jQuery and Handlebars.
         <details>
           <summary>{{prjTitle}}: {{prjSummary}}</summary>
           <p class="project-details">{{{prjDetails}}}</p>
+          {{#if prjLink}}
           <p><a class="project-link" href="{{prjLink}}" target="_blank">Link to Deployed Project</a>
+          {{else}}
+          <p><a class="project-link">No Link to Deployed Project</a>
+          {{/if}}
              <a class="project-link" href="{{prjSrcLink}}" target="_blank">Link to Source Code</a></p>
         </details>
       </article>
     </script>
-    <script id="wip-template" type="type/x-handlebars-template">
-      <article>
-        <details>
-          <summary>{{prjTitle}}: {{prjSummary}}</summary>
-          <p class="project-details">{{{prjDetails}}}</p>
-          <p><a class="project-link">No Link to Deployed Project</a>
-             <a class="project-link" href="{{prjSrcLink}}" target="_blank">Link to Source Code</a></p>
-        </details>
-      </article>
-    </script>  </head>
+
+    </head>
   <body>
     <main class="the-big-container">
       <header>

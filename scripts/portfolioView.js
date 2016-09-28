@@ -30,7 +30,7 @@
       return project.prjType === 'WIP';
     })
     .forEach(function(a){
-      $('#wips').append(a.toHtmlWip());
+      $('#wips').append(a.toHtml());
     });
 
     PortfolioView.handleMainNav();

@@ -21,16 +21,6 @@
     return html;
   };
 
-  Project.prototype.toHtmlWip = function() {
-    // use Handlebar templating to create project data for HTML.
-    var source = $('#wip-template').html();
-    var template = Handlebars.compile(source);
-    var html = template(this);
-
-    return html;
-  };
-
-
   // loadAll will take ALL the parsed JSON data and put it in the project arrays for processing.
   Project.loadAll = function(dataWePassIn) {
     dataWePassIn.forEach(function(ele) {
