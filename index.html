@@ -22,6 +22,9 @@ This makes use of jQuery and Handlebars.
       <article>
         <details>
           <summary>{{prjTitle}}: {{prjSummary}}</summary>
+          {{#if prjCompletionDt}}
+          <p>Completed on: {{prjCompletedOn}}, {{daysAgo}} days ago.</p>
+          {{/if}}
           <p class="project-details">{{{prjDetails}}}</p>
           {{#if prjLink}}
           <p><a class="project-link" href="{{prjLink}}" target="_blank">Link to Deployed Project</a>
@@ -74,11 +77,14 @@ This makes use of jQuery and Handlebars.
       </section>
 
       <footer>
-        &copy; 2016 John Gothro
+        <p>&copy; 2016 John Gothro</p><p id="stats"></p>
       </footer>
     </main>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <!-- Vendor scripts  -->
+    <script src="/vendor/scripts/jquery.min.js"></script> <!-- v3.1.1 -->
+    <script src="/vendor/scripts/handlebars-v4.0.5.js"></script> <!-- v4.0.5 -->
+    <script src="/vendor/scripts/marked.min.js"></script> <!-- v??? -->
+    <script src="/vendor/scripts/moment.min.js"></script> <!-- v2.15.1 -->
     <!-- Model -->
     <script type="text/javascript" src="scripts/portfolio.js"></script>
     <!-- View -->
