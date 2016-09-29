@@ -1,8 +1,6 @@
-
+// Process the data...
 // Load and generate HTML for the portfolio items
 (function(module) {
-
-  Project.all = [];
 
   function Project (dataIn) {
     // constructor function for a Project object
@@ -11,25 +9,21 @@
     };
   };
 
+  Project.all = [];
+
   // Functions to render the HTML using the appropriate template
   Project.prototype.toHtml = function() {
     // use Handlebar templating to create project data for HTML.
-    var source = $('#project-template').html();
-    var template = Handlebars.compile(source);
+    var template = Handlebars.compile($('#project-template').html());
+    this.prjDetails = marked(this.prjDetails);
+    // generating a date; will need to separate displaying it and using it for a calc.
+    var tempDate = new Date(this.prjCompletionDt);
+    this.prjCompletedOn = moment(tempDate).format('MMM Do YYYY');
+    this.daysAgo = parseInt((new Date() - tempDate)/60/60/24/1000);
     var html = template(this);
 
     return html;
   };
-
-  Project.prototype.toHtmlWip = function() {
-    // use Handlebar templating to create project data for HTML.
-    var source = $('#wip-template').html();
-    var template = Handlebars.compile(source);
-    var html = template(this);
-
-    return html;
-  };
-
 
   // loadAll will take ALL the parsed JSON data and put it in the project arrays for processing.
   Project.loadAll = function(dataWePassIn) {
