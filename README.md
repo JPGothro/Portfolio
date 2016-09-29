@@ -13,3 +13,11 @@ Portfolio of projects I built
 
 ## Big Issue RESOLVED! By Erica Hendricks
 - Thanks to Erica for getting me to use CSS to style the project state when details are shown.
+
+## Refactoring (Class 9)
+- Added a date field to project data for display and use in stats.
+- Modified Handlebars template to allow for date data.
+- Using the array method, reduce, when building stats.
+- Eliminated CDNs and all vendor code is in vendor folder.
+- Added more comments in code explaining functionality.
+- All encapsulated by IIFE's.
