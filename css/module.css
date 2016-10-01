@@ -1,6 +1,6 @@
 /* CSS Styling */
 
-/* begin with mobile formatting first */
+/* Style mobile formatting first, add larger viewports farther down */
 
 .main-hdr {
   font-size: 1.8em;
@@ -11,13 +11,21 @@
 }
 
 .primary-nav {
-  display: block; /* a temporary change, I think */
   list-style-type: none;
 }
 
+.primary-nav:hover .nav-items {
+  display: block;
+}
+
 .nav-items {
+  display: none;
   list-style-type: none;
   padding: 0px;
+}
+
+.icon-menu {
+  font-size; 1.5em;
 }
 
 .nav-items li {
@@ -26,11 +34,17 @@
   width: 40%;
   border: 2px solid #4B0082;
   border-radius: 10px;
-  padding-left: 1.1em;
+  padding-left: 0.1em;
   text-align: left;
-  height: 20px;
+  height: 25px;
   margin-bottom: .3em;
   margin-right: .5em;
+}
+
+.nav-items li img {
+  border: 0em;
+  padding-right: 0.1em;
+
 }
 
 #projects {
@@ -47,7 +61,11 @@ article details[open] {
   background-color: #B6E1FC;
 }
 
+summary {
+  font-size: 1.1em;
+}
 
+/* styling for larger viewports */
 @media only screen and (min-width: 915px) {
   .main-hdr {
     width: 100%;
@@ -61,15 +79,19 @@ article details[open] {
     display: block;
   }
 
-  .iconmenu {
+  .icon-menu {
     display: none;
+  }
+
+  .nav-items {
+    display: block;
   }
 
   .nav-items li {
     display: inline;
     width: 5%;
     border: 2px solid blue;
-    padding-left: 1.1em;
+    padding-left: 0.25em;
   }
 
 }

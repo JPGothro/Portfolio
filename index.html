@@ -3,7 +3,7 @@
 <!--
 Website displaying information about the projects I have worked on or developed
 on my own or as part of a team in which I contributed significantly.
-This makes use of jQuery and Handlebars.
+This makes use of jQuery and Handlebars, IcoMoon, Marked, Moment.
  -->
 
 <html>
@@ -13,6 +13,7 @@ This makes use of jQuery and Handlebars.
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="vendor/css/normalize.css">
+    <!-- <link rel="stylesheet" href="vendor/css/icons.css"> -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/module.css">
@@ -21,7 +22,7 @@ This makes use of jQuery and Handlebars.
     <script id="project-template" type="type/x-handlebars-template">
       <article>
         <details>
-          <summary>{{prjTitle}}: {{prjSummary}}</summary>
+          <summary><strong>{{prjTitle}}: {{prjSummary}}</strong></summary>
           {{#if prjCompletionDt}}
           <p>Completed on: {{prjCompletedOn}}, {{daysAgo}} days ago.</p>
           {{/if}}
@@ -43,14 +44,20 @@ This makes use of jQuery and Handlebars.
         <h1 class="main-hdr">Portfolio of Projects</h1>
       </header>
       <nav class="primary-nav">
-        <div class="iconmenu"></div>
+        <div class="icon-menu"><img src="vendor/svg/190-menu.svg"/></div>
         <ul class="nav-items">
-          <li class="tab" data-content="projects"><a href="#">Projects</a></li>
-          <li class="tab" data-content="wips"><a href="#">WIP Projects</a></li>
-          <li class="tab" data-content="about"><a href="#">About</a></li>
-          <li><a href="https://www.linkedin.com/in/john-gothro" target="_blank">Linked In</a></li>
-          <li><a href="https://github.com/JPGothro/Portfolio" target="_blank">GitHub</a></li>
-          <li><a href="mailto:jpgothro@gmail.com">Email John</a></li>
+          <li class="tab" data-content="projects">
+            <img src="vendor/svg/001-home.svg"><a href="#">Projects</a></li>
+          <li class="tab" data-content="wips"><img src="vendor/svg/049-folder-open.svg"/>
+            <a href="#">WIP Projects</a></li>
+          <li class="tab" data-content="about"><img src="vendor/svg/114-user.svg"/>
+            <a href="#">About</a></li>
+          <li><img src="vendor/svg/458-linkedin.svg" alt="" />
+            <a href="https://www.linkedin.com/in/john-gothro" target="_blank">Linked In</a></li>
+          <li><img src="vendor/svg/433-github.svg"/>
+            <a href="https://github.com/JPGothro/Portfolio" target="_blank">GitHub</a></li>
+          <li><img src="vendor/svg/389-mail2.svg"/>
+          <a href="mailto:jpgothro@gmail.com">Email John</a></li>
         </ul>
       </nav>
       <section id="projects" class="tab-content" data-content="projects">
