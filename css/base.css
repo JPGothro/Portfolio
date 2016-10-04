@@ -10,6 +10,15 @@ h1, h2, h3 {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
+h1 {
+  margin-bottom: 2em;
+}
+
+h2 {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
 a {
   text-decoration: none;
   margin-right: 1em;
