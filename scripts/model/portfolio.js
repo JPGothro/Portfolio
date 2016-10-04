@@ -35,36 +35,35 @@
   // This function below will retrieve ALL the data from either a local or remote
   // source, process it, then hand off control to the View...
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(next) {
     if (localStorage.portfolioData) {
         // When our data is already in localStorage:
         // 1. We can process it,
         // 2. Then we can render the index page.
       var storedData = JSON.parse(localStorage.getItem('portfolioData'));
       Project.loadAll(storedData);
+      next();
     } else {
         //  1. Load our json data,
         //  2. Store that data in localStorage so we can skip the server call next time.
         //  3. And then render the index page. */
       $.ajax('/data/portfolioData.json', {
         method: 'GET',
-        success: successHandler,
+        success: successHandler(data, nextFunction),
         error: errorHandler
       });
     }
   };
 
-  function successHandler(data) {
+  function successHandler(data, nextFunction) {
     localStorage.setItem('portfolioData', JSON.stringify(data));
     Project.loadAll(data);
-    PortfolioView.renderIndexPage();
+    next();
   };
 
   function errorHandler(error) {
-    console.log('ERROR', error);
+    console.log('ERROR: ', error);
   };
-
-  Project.fetchAll();
 
   module.Project = Project;
 })(window);

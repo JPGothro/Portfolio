@@ -25,7 +25,7 @@
 }
 
 .icon-menu {
-  font-size; 1.5em;
+  font-size: 1.5em;
 }
 
 .nav-items li {
@@ -61,6 +61,10 @@ article details[open] {
   background-color: #B6E1FC;
 }
 
+.prj-scrnshot {
+  width: 15rem;
+}
+
 summary {
   font-size: 1.1em;
 }
@@ -73,6 +77,16 @@ summary {
     text-align: center;
     color: #000000;
     background-color: #33aa88;
+  }
+
+  .proj-dtl-wrapper {
+    overflow: auto;
+  }
+
+  .prj-scrnshot {
+    float: right;
+    width: 25rem;
+    margin-left: .2rem;
   }
 
   .primary-nav {

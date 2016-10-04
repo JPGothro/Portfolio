@@ -1,0 +1,23 @@
+{
+  "name": "project_portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of projects I have worked on",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPGothro/Portfolio.git"
+  },
+  "author": "John P. Gothro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPGothro/Portfolio/issues"
+  },
+  "homepage": "https://github.com/JPGothro/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "page": "^1.7.1"
+  }
+}
