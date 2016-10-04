@@ -49,16 +49,16 @@
         //  3. And then render the index page. */
       $.ajax('/data/portfolioData.json', {
         method: 'GET',
-        success: successHandler(data, nextFunction),
+        success: successHandler,
         error: errorHandler
       });
     }
   };
 
-  function successHandler(data, nextFunction) {
+  function successHandler(data) {
     localStorage.setItem('portfolioData', JSON.stringify(data));
     Project.loadAll(data);
-    next();
+    PortfolioView.renderIndexPage();
   };
 
   function errorHandler(error) {
