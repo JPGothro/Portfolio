@@ -4,7 +4,7 @@
   projectController.reveal = function() {
     $('.tab-content').hide();
     $('#projects').show();
-    PortfolioView.getStats('projects');
+    portfolioView.getStats('projects');
   };
 
   module.projectController = projectController;
