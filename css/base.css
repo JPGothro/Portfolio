@@ -27,3 +27,7 @@ a {
 .the-big-container {
   margin: 2em;
 }
+
+#about ul {
+  list-style-type: none;
+}

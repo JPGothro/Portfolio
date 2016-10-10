@@ -61,9 +61,5 @@
     }
   };
 
-  function errorHandler(error) {
-    console.log('ERROR: ', error);
-  };
-
   module.Project = Project;
 })(window);

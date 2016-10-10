@@ -8,7 +8,7 @@
     var request = $.ajax({
       url: 'https://api.github.com/user/repos',
       method: 'GET',
-      headers: {Authentication: ' token ' + githubAccessToken }
+      data: 'access_token=' + githubAccessToken
     })
     .done(function(returnedData) {
       returnedData.forEach(function(item) {
@@ -23,11 +23,11 @@
     });
   };
 
-  githubReposObj.withTheAttribute = function(myAttr) {
+  githubReposObj.withTheAttribute = function(passedAttr) {
     return githubReposObj.allRepos.filter(function(aRepo) {
-      return aRepo[myAttr];
+      return aRepo[passedAttr];
     });
   };
 
-  module.reposObj = reposObj;
+  module.githubReposObj = githubReposObj;
 })(window);
