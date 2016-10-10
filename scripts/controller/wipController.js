@@ -4,7 +4,7 @@
   wipController.reveal = function() {
     $('.tab-content').hide();
     $('#wips').show();
-    PortfolioView.getStats('wips');
+    portfolioView.getStats('wips');
   };
 
   module.wipController = wipController;

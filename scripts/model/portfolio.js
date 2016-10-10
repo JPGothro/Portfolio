@@ -48,21 +48,17 @@
         //  2. Store that data in localStorage so we can skip the server call next time.
         //  3. And then render the index page. */
       $.ajax('/data/portfolioData.json', {
-        method: 'GET',
-        success: successHandler,
-        error: errorHandler
+        method: 'GET'
+      })
+      .done(function (data) {
+        localStorage.setItem('portfolioData', JSON.stringify(data));
+        Project.loadAll(data);
+        portfolioView.renderIndexPage();
+      })
+      .fail(function (error) {
+        console.log('ERROR: ', error);
       });
     }
-  };
-
-  function successHandler(data) {
-    localStorage.setItem('portfolioData', JSON.stringify(data));
-    Project.loadAll(data);
-    PortfolioView.renderIndexPage();
-  };
-
-  function errorHandler(error) {
-    console.log('ERROR: ', error);
   };
 
   module.Project = Project;

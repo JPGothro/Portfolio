@@ -2,9 +2,9 @@
 // Manage Menu Navigation items for projects and about sections.
 (function(module){
 
-  var PortfolioView = {};
+  var portfolioView = {};
 
-  PortfolioView.renderIndexPage = function() {
+  portfolioView.renderIndexPage = function() {
     // filter the projects array for the appropriate selected tab.
     Project.all.filter(function(project) {
       return project.prjType === 'PROJECTS';
@@ -22,7 +22,7 @@
 
   };
 
-  PortfolioView.getStats = function(selectedTab) {
+  portfolioView.getStats = function(selectedTab) {
     if (selectedTab.toLowerCase() === 'about') {
       // find the most recently completed project and display that info
       var mostRecentPrj = Project.all.filter(function(project) {
@@ -48,7 +48,7 @@
   };
 
   // call the functions
-  Project.fetchAll(PortfolioView.renderIndexPage);
+  Project.fetchAll(portfolioView.renderIndexPage);
 
-  module.PortfolioView = PortfolioView;
+  module.portfolioView = portfolioView;
 })(window);
