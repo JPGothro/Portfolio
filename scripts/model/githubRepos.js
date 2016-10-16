@@ -6,13 +6,12 @@
   githubReposObj.requestRepos = function(callback) {
     // Use an AJAX call to get the REPO data
     var request = $.ajax({
-      url: 'https://api.github.com/user/repos',
-      method: 'GET',
-      data: 'access_token=' + githubAccessToken
+      url: '/github/user/repos',
+      type: 'GET'
     })
     .done(function(returnedData) {
       returnedData.forEach(function(item) {
-        // Store the Repo data from JSON
+        // Store the returned Repo data
         githubReposObj.allRepos.push(item);
       });
       callback();

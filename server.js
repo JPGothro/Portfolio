@@ -1,7 +1,18 @@
 // Let's build a server!
 var express = require('express'),
+  requestProxy = require('express-request-proxy'),
   port = process.env.PORT || 3000,
   app = express();
+
+function proxyGitHub(request, response) {
+  console.log('proxyGitHub handling call');
+  (requestProxy({
+    url: 'https://api.github.com/' + request.params[0],
+    data: 'access_token=' + process.env.ACCESS_TOKEN_GITHUB
+  }))(request, response);
+};
+
+app.get('/github/*', proxyGitHub);
 
 app.use(express.static('./'));
 
