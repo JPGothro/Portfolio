@@ -69,6 +69,14 @@ summary {
   font-size: 1.1em;
 }
 
+.repo_details p {
+  margin: .2em;
+}
+
+.repo_details a {
+  margin: 0;
+}
+
 /* styling for larger viewports */
 @media only screen and (min-width: 915px) {
   .main-hdr {

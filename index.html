@@ -10,15 +10,16 @@ This makes use of jQuery and Handlebars, IcoMoon, Marked, Moment.
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow">
     <link rel="stylesheet" href="vendor/css/normalize.css">
-    <!-- <link rel="stylesheet" href="vendor/css/icons.css"> -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/module.css">
     <link rel="icon" type="image/x-icon" href="images/AutumnLeaves.png">
+
     <title>Portfolio for John</title>
+
     <!-- Adding Handlebars templating -->
     <script id="project-template" type="type/x-handlebars-template">
       <article>
@@ -43,11 +44,13 @@ This makes use of jQuery and Handlebars, IcoMoon, Marked, Moment.
 
     <script id="repos-template" type="type/x-handlebars-template">
       <li>
-        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
-        <p>Description: {{description}}</p>
-        <p>Primary Language: {{language}}</p>
-        <p>Created: {{created_at}}</p>
-        <p>Last Updated: {{updated_at}}</p>
+        <a href="{{html_url}}" target="_blank">{{name}}</a>
+        <div class="repo_details">
+          <p>Description: {{description}}</p>
+          <p>Primary Language: {{language}}</p>
+          <p>Created: {{created_at}}</p>
+          <p>Last Updated: {{updated_at}}</p>
+        </div>
       </li>
     </script>
 
@@ -70,7 +73,7 @@ This makes use of jQuery and Handlebars, IcoMoon, Marked, Moment.
           <li><img src="vendor/svg/458-linkedin.svg" alt="" />
             <a href="https://www.linkedin.com/in/john-gothro" target="_blank">Linked In</a></li>
           <li><img src="vendor/svg/433-github.svg"/>
-            <a href="https://github.com/JPGothro/Portfolio" target="_blank">GitHub</a></li>
+            <a href="https://github.com/JPGothro" target="_blank">GitHub</a></li>
           <li><img src="vendor/svg/389-mail2.svg"/>
           <a href="mailto:jpgothro@gmail.com">Email John</a></li>
         </ul>
