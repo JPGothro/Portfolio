@@ -7,7 +7,7 @@
     // Use an AJAX call to get the REPO data
     var request = $.ajax({
       url: '/github/user/repos',
-      type: 'GET'
+      method: 'GET'
     })
     .done(function(returnedData) {
       returnedData.forEach(function(item) {

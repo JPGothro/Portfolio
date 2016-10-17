@@ -8,11 +8,19 @@ function proxyGitHub(request, response) {
   console.log('proxyGitHub handling call');
   (requestProxy({
     url: 'https://api.github.com/' + request.params[0],
-    header: {
+    headers: {
       Authorization: 'token ' + process.env.ACCESS_TOKEN_GITHUB
     }
   }))(request, response);
 };
+
+// function proxyGitHub(request, response) {
+//   console.log('proxyGitHub v2 handling call');
+//   (requestProxy({
+//     url: 'https://api.github.com/' + request.params[0],
+//     data: 'access_token=' + process.env.ACCESS_TOKEN_GITHUB
+//   }))(request, response);
+// };
 
 app.get('/github/*', proxyGitHub);
 
